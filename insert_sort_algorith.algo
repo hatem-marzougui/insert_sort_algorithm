@@ -1,0 +1,28 @@
+ALGORITHM insert_sort
+
+VAR
+
+ arr : ARRAY_OF integer[50];
+  i,position, valueToInsert INTEGER
+
+BEGIN
+
+FOR i FROM 1 TO arr.length STEP 1  DO
+
+      /* select value to be inserted */
+      valueToInsert := arr[i]
+      position := i
+      
+      /*locate the position for the element to be inserted */		
+      WHILE (position > 0 and arr[position-1] > valueToInsert) DO
+           arr[position] := arr[position-1]
+         Position := Position -1
+      END_WHILE  
+        
+		
+      /* insert the number at the right position */
+      arr[position] := valueToInsert
+      
+   END_FOR
+
+END
